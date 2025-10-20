@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Física: Experimento de Young y Velocidad de la Luz</title>
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Sunflower', sans-serif;
+      background: linear-gradient(180deg, #0f2027, #203a43, #2c5364);
+      color: #f1f1f1;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111;
+      color: #5cc8ff;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: Georgia, serif;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+
+    nav a {
+      color: #5cc8ff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h2 {
+      font-family: Georgia, serif;
+      color: #5cc8ff;
+      border-bottom: 2px solid #5cc8ff;
+      padding-bottom: 5px;
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.4)
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      margin-top: 2rem;
+      color: #bbb;
+    }
+    h3 {
+  font-family: Georgia, serif;
+  color: #5cc8ff;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid #5cc8ff;
+  padding-bottom: 3px;
+}
+  </style>
+  <!-- MathJax para fórmulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header>
+  <h1>Física Moderna</h1>
+  <nav>
+    <a href="#intro">Introducción</a>
+    <a href="#Fizeau">Experimento de Fizeau</a>
+    <a href="#luz">Velocidad de la Luz</a>
+    <a href="#disco">Disco de Newton</a>
+    <a href="#recursos">Videos y Simuladores</a>
+  </nav>
+</header>
+
+  <section id="intro">
+    <h2>Introducción</h2>
+    <div class="card">
+      <p>
+        La física ha sido fundamental para comprender el universo. Dos de los experimentos más influyentes son el experimento de la doble rendija de <b>Young</b>, que reveló la naturaleza ondulatoria de la luz, y los estudios sobre la <b>velocidad de la luz</b>, que definieron una constante universal para la ciencia y la tecnología. Ambos temas marcan un antes y un después en la historia de la física y permiten explicar fenómenos que hoy en día aplicamos en la vida cotidiana.
+      </p>
+    </div>
+  </section>
+
+  <section id="Fizeau">
+    <h2>Experimemto de Fizeau: Medición de la velocidad de la luz </h2>
+    <div class="card">
+      <p>
+    En 1849, el físico francés <strong>Armand Fizeau</strong> realizó el primer experimento
+    que permitió medir directamente la <strong>velocidad de la luz</strong> usando medios terrestres.
+    Su ingenioso montaje fue una combinación de precisión mecánica y observación óptica.
+  </p>
+
+  <figure>
+    <img src="img/fizeau.jpeg"
+         alt="Patrón de interferencia"
+      style="display:block; margin:20px auto; max-width:80%; height:auto; border-radius:8px;">
+    <figcaption>
+      Esquema representativo del experimento de Fizeau. Fuente: CSIC.
+    </figcaption>
+  </figure>
+
+  <h3>¿Cómo funciona?</h3>
+  <p>
+    El experimento consistía en una <strong>rueda dentada giratoria</strong>, una fuente de luz (como una vela)
+    y un <strong>espejo situado a varios kilómetros de distancia</strong>.
+    La luz pasaba por entre los dientes de la rueda, viajaba hasta el espejo,
+    y luego regresaba reflejada al observador.
+  </p>
+  <p>
+    Si la rueda giraba lentamente, la luz regresaba por el mismo espacio entre dientes y era visible.
+    Pero cuando la rueda aumentaba su velocidad, la luz reflejada coincidía con un diente y quedaba bloqueada.
+    A partir de la velocidad de rotación de la rueda, el número de dientes y la distancia
+    entre el espejo y la rueda (<em>d</em>), Fizeau pudo calcular la velocidad de la luz.
+  </p>
+
+  <div class="formula">
+    <p><strong>Fórmula general:</strong></p>
+    <pre>c = 2 · d · n</pre>
+    <p>
+      Donde: <br>
+      <strong>c</strong> = velocidad de la luz <br>
+      <strong>d</strong> = distancia entre la rueda y el espejo <br>
+      <strong>n</strong> = frecuencia de rotación de la rueda (en dientes por segundo)
+    </p>
+  </div>
+
+  <h3>Resultado y aportes</h3>
+  <p>
+    Fizeau obtuvo un valor aproximado de <strong>313.000 km/s</strong>, muy cercano al valor actual.
+    Su experimento demostró que la luz tiene una <strong>velocidad finita</strong> y permitió
+    refinar los métodos experimentales que más tarde inspiraron a otros científicos como Michelson y Morley.
+  </p>
+
+  <h3> Conexión con el Experimento de Young y el Disco de Newton</h3>
+  <p>
+    Mientras el <strong>Experimento de Young</strong> demostró la <em>naturaleza ondulatoria</em> de la luz,
+    el experimento de <strong>Fizeau</strong> permitió medir su <em>rapidez</em> con gran exactitud.
+    Y gracias al <strong>Disco de Newton</strong> comprendemos cómo la luz blanca se descompone en
+    múltiples colores, uniendo así tres visiones complementarias del mismo fenómeno.
+  </p>
+
+      
+    </div>
+  </section>
+
+  <section id="luz">
+    <h2>Velocidad de la Luz</h2>
+    <div class="card">
+      <p>
+        Durante siglos se pensó que la luz viajaba de forma instantánea. Fue Ole Rømer en 1676 quien, observando los eclipses de Io (una luna de Júpiter), demostró que la luz tiene una velocidad finita. Con el tiempo, múltiples científicos perfeccionaron la medición hasta establecerla con gran precisión.
+En 1983 se definió oficialmente que la velocidad de la luz en el vacío es una constante universal:
+<p style="text-align:center;">
+  $$c \approx 3.00 \times 10^{8}\ \mathrm{m/s}$$
+</p> 
+
+      <p>
+        Esta constante es fundamental en la física porque forma parte de la teoría de la relatividad de Einstein y está relacionada con la famosa ecuación E = mc², que conecta energía y masa.
+La velocidad de la luz también es crucial en tecnologías modernas como las telecomunicaciones, los satélites, la astronomía y los sistemas de posicionamiento global (GPS), donde los cálculos dependen de esta medida exacta.
+      </p>
+      <img src="img/luz.png" alt="Velocidad de la luz"
+      style="display:block; margin:20px auto; max-width:80%; height:auto; border-radius:8px;">
+      
+    </div>
+  </section>
+<section>
+  <h2>Aportes</h2>
+<div class="card">
+  <p>
+    Los experimentos para medir la velocidad de la luz demostraron que esta es finita y constante en el vacío. Este hallazgo fue clave para el desarrollo de la teoría de la relatividad y para comprender fenómenos en la física moderna
+    </p>
+    
+<h2>Ejemplo</h2>
+  <p>
+    Gracias a estos aportes, hoy podemos calcular distancias astronómicas y crear sistemas como el GPS, que requieren conocer la velocidad de la luz con gran exactitud para funcionar correctamente.
+  </p>
+</div>
+</section>
+<section id="disco">
+  <h2>Disco de Newton</h2>
+  <div class="card">
+    <p>
+      El <strong>disco de Newton</strong> fue creado por <em>Isaac Newton</em> en el siglo XVII para demostrar que 
+      la <strong>luz blanca está compuesta por todos los colores del espectro visible</strong>.
+      El experimento consiste en un disco dividido en siete secciones de colores: 
+      rojo, naranja, amarillo, verde, azul, añil y violeta. 
+      Cuando el disco se hace girar rápidamente, los colores se mezclan visualmente 
+      y el ojo humano percibe un color blanco o grisáceo.
+    </p>
+
+    <p>
+      Este fenómeno se explica por la <strong>persistencia de la visión</strong>: 
+      el ojo humano no distingue cada color por separado cuando la rotación es rápida, 
+      sino que los colores primarios se combinan por adición y producen la sensación de luz blanca.
+    </p>
+
+    <p>Newton descubrió que cada color tiene una longitud de onda distinta:</p>
+    <table style="margin:auto; border-collapse: collapse; text-align:center;">
+      <tr><th style="border:1px solid #000; padding:5px;">Color</th><th style="border:1px solid #000; padding:5px;">Longitud de onda (λ)</th></tr>
+      <tr><td style="border:1px solid #000; padding:5px;">Rojo</td><td style="border:1px solid #000; padding:5px;">700 nm</td></tr>
+      <tr><td style="border:1px solid #000; padding:5px;">Naranja</td><td style="border:1px solid #000; padding:5px;">620 nm</td></tr>
+      <tr><td style="border:1px solid #000; padding:5px;">Amarillo</td><td style="border:1px solid #000; padding:5px;">580 nm</td></tr>
+      <tr><td style="border:1px solid #000; padding:5px;">Verde</td><td style="border:1px solid #000; padding:5px;">530 nm</td></tr>
+      <tr><td style="border:1px solid #000; padding:5px;">Azul</td><td style="border:1px solid #000; padding:5px;">470 nm</td></tr>
+      <tr><td style="border:1px solid #000; padding:5px;">Añil</td><td style="border:1px solid #000; padding:5px;">440 nm</td></tr>
+      <tr><td style="border:1px solid #000; padding:5px;">Violeta</td><td style="border:1px solid #000; padding:5px;">400 nm</td></tr>
+    </table>
+
+    <p>La relación entre la velocidad, frecuencia y longitud de onda se expresa como:</p>
+    <p style="text-align:center;">$$ c = \lambda \cdot f $$</p>
+
+    <p>Por ejemplo, para la luz verde con una longitud de onda de \(530 \, nm\):</p>
+    <p style="text-align:center;">$$ f = \frac{c}{\lambda} = \frac{3 \times 10^8}{5.3 \times 10^{-7}} \approx 5.66 \times 10^{14} \, Hz $$</p>
+
+    <p>
+      Esto significa que las ondas verdes vibran alrededor de 
+      <strong>566 billones de veces por segundo</strong>.
+    </p>
+
+    <p>
+      El disco de Newton fue clave para confirmar la 
+      <strong>teoría ondulatoria y cromática de la luz</strong>, 
+      demostrar que el color no es una propiedad de los objetos, 
+      sino una percepción visual provocada por la luz reflejada, 
+      y sentar las bases de la <strong>óptica moderna</strong> y las 
+      <strong>pantallas RGB</strong> que usamos hoy en día.
+    </p>
+
+    <img src="img/Prisma-newton.jpg" alt="Disco de Newton girando" style="display:block; margin:auto; width:60%; border:1px solid black; border-radius:10px;">
+  </div>
+</section>
+<section>
+  <h2>Aportes</h2>
+  <div class="card">
+    <p>
+      El <strong>Disco de Newton</strong> no solo demostró que la luz blanca está compuesta por todos los colores del espectro visible, 
+      sino que también permitió comprender mejor el comportamiento de la luz y su relación con la percepción del color. 
+      Este experimento fue un aporte fundamental a la <strong>óptica moderna</strong> y a la comprensión de la naturaleza ondulatoria de la luz.
+    </p>
+
+    <p>
+      Gracias a este descubrimiento, hoy entendemos cómo los colores se mezclan en distintos sistemas visuales, 
+      como las <strong>pantallas RGB</strong> de televisores, computadores y teléfonos, que utilizan los mismos principios 
+      de mezcla aditiva del color observados por Newton.
+    </p>
+
+    <h3>Ejemplo práctico</h3>
+    <p>
+      Cuando un disco de Newton se hace girar rápidamente, los colores rojo, naranja, amarillo, verde, azul, añil y violeta 
+      se combinan visualmente por la <strong>persistencia de la visión</strong>. 
+      El ojo humano no distingue cada color por separado, sino que percibe una tonalidad blanca o grisácea, 
+      mostrando cómo los colores del espectro se integran para formar la luz blanca.
+    </p>
+
+    <p>
+      Este principio también se aplica en experimentos de <strong>fotometría</strong> y en la creación de simulaciones digitales, 
+      donde se demuestra cómo la mezcla de longitudes de onda produce distintas sensaciones de color en la retina.
+    </p>
+
+    <img src="img/disco-newton-girando.gif" alt="Ejemplo del disco de Newton girando"
+    style="display:block; margin:auto; width:60%; border:1px solid black; border-radius:10px;">
+  </div>
+</section>
+<section id="recursos">
+  <h2> Videos y Simuladores Interactivos</h2>
+  <div class="card">
+    <p>
+      Explora cómo la luz, el color y la velocidad se unen en la física moderna.  
+      Aquí encontrarás <strong>videos</strong> y <strong>simuladores</strong> sobre el arcoíris, el experimento de Fizeau,
+      el disco de Newton y la velocidad de la luz. 
+    </p>
+
+    <div class="media-grid">
+
+      <!-- Veritasium -->
+      <div class="media-item">
+        <iframe width="100%" height="230" 
+                src="https://www.youtube.com/embed/24GfgNtnjXc" 
+                title="Por qué no hay dos personas que ven el mismo arcoíris - Veritasium"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+        <p> Veritasium: “Por qué no hay dos personas que ven el mismo arcoíris”</p>
+      </div>
+
+      <!--  Simulador: Velocidad de la Luz -->
+      <div class="media-item">
+        <iframe src="https://phet.colorado.edu/sims/html/bending-light/1.1.28/bending-light_en_iframe.html"
+                width="100%" height="230"
+                title="PhET: Bending Light"
+                style="border-radius:10px; border:none;">
+        </iframe>
+        <p> Simulador: Velocidad y refracción de la luz (PhET)</p>
+        <a href="https://phet.colorado.edu/en/simulation/bending-light" target="_blank">🔗 Abrir simulador</a>
+      </div>
+
+      <!--  Simulador: Experimento de Fizeau -->
+      <div class="media-item">
+        <iframe src="https://demonstrations.wolfram.com/FizeauWheel/"
+                width="100%" height="230"
+                title="Simulador Experimento de Fizeau"
+                style="border-radius:10px; border:none;">
+        </iframe>
+        <p> Simulador: Experimento de Fizeau (Wolfram)</p>
+        <a href="https://demonstrations.wolfram.com/FizeauWheel/" target="_blank">🔗 Abrir simulador</a>
+      </div>
+
+      <!--  Simulador: Maxwell’s Color Wheel -->
+      <div class="media-item">
+        <iframe width="100%" height="230"
+                src="https://sam-reside.github.io/Maxwell-Color-Wheel/"
+                title="Simulador Maxwell’s Color Wheel — mezcla de colores tipo Disco de Newton"
+                style="border-radius:10px; border:none;">
+        </iframe>
+        <p>Simulador: Maxwell’s Color Wheel (versión digital del Disco de Newton)</p>
+        <a href="https://sam-reside.github.io/Maxwell-Color-Wheel/" target="_blank">🔗 Abrir simulador</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Sección de videos y simuladores */
+  #recursos {
+    padding: 2rem;
+  }
+
+  #recursos h2 {
+    color: #5cc8ff;
+    border-bottom: 2px solid #5cc8ff;
+    padding-bottom: 5px;
+  }
+
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .media-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .media-item:hover {
+    background: rgba(92, 200, 255, 0.1);
+    transform: scale(1.04);
+  }
+
+  .media-item p {
+    color: #5cc8ff;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+
+  .media-item a {
+    color: #5cc8ff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .media-item a:hover {
+    text-decoration: underline;
+    color: #9de2ff;
+  }
+</style>
+</style>
+  <section id="integrantes">
+    <h2>Integrantes</h2>
+    <div class="card">
+      <ul>
+        <li>Annedelys Delgado</li>
+        <li>Daniel Rodriguez</li>
+        <li>Lina Ruge</li>
+        <li>Nicol Saavedra</li>
+        <li>Johan Triana</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Proyecto académico - Física Moderna © 2025</p>
+  </footer>
+
+</body>
+</html>
